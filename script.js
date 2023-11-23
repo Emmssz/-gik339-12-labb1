@@ -1,0 +1,1 @@
+const check = document.getElementById(checkbox)

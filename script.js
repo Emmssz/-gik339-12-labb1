@@ -1,1 +1,1 @@
-const check = document.getElementById(checkbox)
+const check = document.getElementById(divStyle)

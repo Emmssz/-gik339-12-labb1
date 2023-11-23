@@ -4,5 +4,7 @@ const btn = document.getElementsByTagName('button')
 const div = document.getElementByClassName('ettNamn')
 
 function functiondeclare () {
-    
-}
+    console.log("Hello")
+
+};
+

@@ -8,27 +8,13 @@ console.log(check);
 console.log(btn);
 console.log(div);
 
-/*
-function changeColor() {
-    var color = document.getElementById('colorInput').value;
-    var colorBox = document.getElementById('colorBox');
-    
-    colorBox.style.backgroundColor = color;
-  }
-*/
-
-
-
-/* document.getElementById("divStyle").addEventListener("click", changeColor); */
+document.getElementById("divStyle").addEventListener("click", changeColor);
 
     function changeColor() {
-        var backgroundColor= document.getElementById('backgroundcolor').value;
-        var contentbox = document.getElementById('contentbox');
-        
-        backgroundColor.style.backgroundColor = color;
+        var getColor = document.getElementById('color-label').value;
+        var getText = document.getElementById('text-label').value;
+        var box = document.getElementsById('ettNamn')
 
+        box.style.backgroundColor = getColor;
+        box.innerHTML = getText;
     }
-
-
-
-

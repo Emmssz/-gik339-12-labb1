@@ -7,8 +7,7 @@ console.log(text);
 console.log(check);
 console.log(btn);
 
-function functiondeclare () {
-    console.log("Hello")
+
 
 };
 

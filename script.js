@@ -6,7 +6,7 @@ const div = document.getElementByClassName('ettNamn')
 console.log(text);
 console.log(check);
 console.log(btn);
-
+console.log(div);
 
 
 

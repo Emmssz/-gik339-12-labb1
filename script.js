@@ -9,8 +9,6 @@ console.log(btn);
 console.log(div);
 
 for (let i = 0; i < check.length; i++) {
-    buttons[i].addEventListener('click', handleClick);
-
-
+    check[i].addEventListener('click', handleCheck);
 }
 

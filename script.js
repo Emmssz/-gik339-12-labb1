@@ -12,5 +12,5 @@ for (let i = 0; i < check.length; i++) {
     buttons[i].addEventListener('click', handleClick);
 
 
-
+}
 

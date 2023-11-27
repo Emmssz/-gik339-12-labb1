@@ -30,13 +30,9 @@ body{
     border-radius:8px;
 }
 
-p{
-    float: left;
-    width: 50%;
-}
-
 label{
     float: left;
+    width: 50%;
 }
 
 input{

@@ -31,15 +31,27 @@ colorBox.style.backgroundColor = color;
 
 document.getElementById("divStyle").addEventListener("clicked", changeColor);
 
+
+/* document.getElementById("divStyle").addEventListener("clicked", changeColor); */
+
 function changeColor() {
   var getColor = document.getElementById('color-label').value;
   var getText = document.getElementById('text-label').value;
   var box = document.getElementsById('ettNamn')
+    function changeColor() {
+        var getColor = document.getElementById('color-label').value;
+        var getText = document.getElementById('text-label').value;
+        var box = document.getElementsById('ettNamn')
 
   box.style.backgroundColor = getColor;
   box.innerHTML = getText;
 }
 
+        box.style.backgroundColor = getColor;
+        box.innerHTML = getText;
+    }
+
+    check.onclick = (changeColor);
 /*
 document.getElementById("test").addEventListener("click", changeColor);
 function changeColor() {

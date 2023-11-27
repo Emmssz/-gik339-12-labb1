@@ -13,8 +13,8 @@ for (let i = 0; i < check.length; i++) {
 }
 
 function changeColor() {
-    var color = document.getElementById('colorInput').value;
-    var colorBox = document.getElementById('colorBox');
+    var color = document.getElementById('.input-settings.color').value;
+    var colorBox = document.getElementById('.input-settings.content');
     
     colorBox.style.backgroundColor = color;
   }

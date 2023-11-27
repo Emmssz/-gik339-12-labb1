@@ -35,6 +35,10 @@ p{
     width: 50%;
 }
 
+label{
+    float: left;
+}
+
 input{
     width: 50%;
     box-sizing: border-box;

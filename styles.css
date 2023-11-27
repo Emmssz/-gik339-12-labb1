@@ -43,6 +43,15 @@ input{
 }
 
 button{
-    width: 25%;
-    float: left;
+    margin: 10% 0%;
+    padding: 5px;
+}
+
+.ettNamn{
+    width: 80%;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
 }

@@ -12,3 +12,9 @@ for (let i = 0; i < check.length; i++) {
     check[i].addEventListener('click', handleCheck);
 }
 
+function changeColor() {
+    var color = document.getElementById('colorInput').value;
+    var colorBox = document.getElementById('colorBox');
+    
+    colorBox.style.backgroundColor = color;
+  }

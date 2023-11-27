@@ -19,7 +19,7 @@ function changeColor() {
 
 
 
-/* document.getElementById("divStyle").addEventListener("clicked", changeColor); */
+/* document.getElementById("divStyle").addEventListener("click", changeColor); */
 
     function changeColor() {
         var getColor = document.getElementById('color-label').value;

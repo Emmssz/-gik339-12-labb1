@@ -17,7 +17,7 @@ function changeColor() {
   }
 */
 
-document.getElementById("divStyle").addEventListener("click", changeColor);
+document.getElementById("divStyle").addEventListener("checked", changeColor);
 
 function changeColor() {
     var getColor = document.getElementById('color-label').value;

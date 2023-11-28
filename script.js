@@ -1,6 +1,45 @@
+//hämtar in de olika elementen från html-koden
 const colorInput = document.getElementById('color-label');
 const textInput = document.getElementById('text-label');
-const divBox = document.getElementById('ettNamn');
+const divBox = document.getElementById('changingDiv');
+const btn = document.getElementById('btnId');
+const checkbox = document.getElementById('divStyle');
+
+//lägger till eventlyssnare för textfälten och checkrutan
+colorInput.addEventListener('input', applyChanges);
+textInput.addEventListener('input', applyChanges);
+checkbox.addEventListener('change', applyChanges);
+
+//eventlyssnare för när användaren klickar på knappen 'ta bort'
+btn.addEventListener('click', function() {
+    // gömmer div-elementet
+    divBox.style.display = 'none'; 
+});
+
+//funktion för de olika ändringarna som sker (färg och text)
+function applyChanges() {
+    //hämtar in värden för färg och text (content)
+    const getColor = colorInput.value;
+    const getText = textInput.value;
+
+    //if sats för om checkrutan är ikryssad
+    if (checkbox.checked) {
+        divBox.style.backgroundColor = getColor;
+        divBox.innerText = getText;
+        //div-elementet visas om checkboxen är markerad och det finns innehåll
+        divBox.style.display = 'block';
+    //else sats för om checkrutan inte är ikryssad
+    } else {
+        //göm div-elementet om checkboxen inte är markerad eller det inte finns innehåll
+        divBox.style.display = 'none';
+    }
+} 
+
+
+
+/*const colorInput = document.getElementById('color-label');
+const textInput = document.getElementById('text-label');
+const divBox = document.getElementById('changingDiv');
 const btn = document.getElementById('btnId');
 const checkbox = document.getElementById('divStyle');
 
@@ -21,13 +60,9 @@ function applyChanges() {
     }
 }
 
-/*bör ses över, div tas ej bort*/
+//bör ses över, div tas ej bort
 
-// koppla eventlyssnare till ett inputfält
-const contentInput = document.getElementById('content');
-contentInput.addEventListener('input', handleBlur); 
-
-// ta bort div elementet
+// tar bort div-elementet
 btn.addEventListener("click", deleteDiv);
 
 function deleteDiv() {
@@ -35,7 +70,7 @@ function deleteDiv() {
   removeElement.remove();
 }
 
-
+*/
 
 
 /*

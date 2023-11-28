@@ -28,6 +28,7 @@ body{
     background-color: var(--off-white);
     padding: 35px;
     border-radius:8px;
+    height: 225px;
 }
 
 label{
@@ -50,9 +51,11 @@ button{
 .changingDiv{
     width: 80%;
     display: block;
+    margin: 0 auto;
     box-sizing: border-box;
     border: 1px solid black;
     padding: 5px;
-    margin: 5px;
     height: 30px;
+    text-align: center;
+    color: aliceblue;
 }

@@ -23,6 +23,56 @@ document.getElementById("divStyle").addEventListener("click", changeColor);
         box.innerHTML = getText;
     }
 
+
+
+/*
+Förslag 2 (behöver utvecklas):
+
+
+const textInput = document.querySelectorAll('.textfield')
+const check = document.getElementById('divStyle')
+const btn = document.getElementsByTagName('button')
+const settingsDiv = document.getElementsByClassName('.settingsDiv')
+
+
+console.log(check);
+console.log(textInput);
+
+textInput.forEach((field) => field.addEventListener('blur', handleBlur));
+
+for (let i = 0; i < check.length; i++) {
+    check[i].addEventListener('click', changeDiv);
+}
+
+const targetInfo = document.getElementById('settingsDiv');
+
+function handleBlur(e) {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    console.log('Name:' +name+ '. Value: ', value)
+
+    if (target.name === 'content') {
+        //uppdaterar text
+        settingsDiv.innerHTML = contentSetting.value;
+
+        //lägger in det i html
+        settingsDiv.insertAdjacentElement('beforeend', settingsDiv);
+    }
+}
+    
+// koppla eventlyssnare till ett inputfält
+const contentInput = document.getElementById('content');
+contentInput.addEventListener('input', handleBlur);
+
+
+
+*/
+
+
+
+
+
     /*
   document.getElementById("test").addEventListener("click", changeColor);
     function changeColor() {

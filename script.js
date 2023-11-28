@@ -1,27 +1,40 @@
-const text = document.querySelectorAll('.textfield')
-const check = document.getElementById('divStyle')
-const btn = document.getElementsByTagName('button')
-const div = document.getElementsByClassName('.ettNamn')
+const colorInput = document.getElementById('color-label');
+const textInput = document.getElementById('text-label');
+const divBox = document.getElementById('ettNamn');
+const btn = document.getElementById('btnId');
+const checkbox = document.getElementById('divStyle');
 
-console.log(text);
-console.log(check);
-console.log(btn);
-console.log(div);
+colorInput.addEventListener('input', applyChanges);
+textInput.addEventListener('input', applyChanges);
+checkbox.addEventListener('change', applyChanges);
 
-for (let i = 0; i < check.length; i++) {
-    check[i].addEventListener('click', handleClick);
-  }
+function applyChanges() {
+    const getColor = colorInput.value;
+    const getText = textInput.value;
 
-document.getElementById("divStyle").addEventListener("click", changeColor);
-
-function changeColor() {
-    var getColor = document.getElementById('color-label').value;
-    var getText = document.getElementById('text-label').value;
-    var box = document.getElementsById('ettNamn')
-
-    box.style.backgroundColor = getColor;
-    box.innerHTML = getText;
+    if (checkbox.checked) {
+        divBox.style.backgroundColor = getColor;
+        divBox.innerText = getText;
+    } else {
+        divBox.style.backgroundColor = '';
+        divBox.innerText = '';
+    }
 }
+
+/*bör ses över, div tas ej bort*/
+
+// koppla eventlyssnare till ett inputfält
+const contentInput = document.getElementById('content');
+contentInput.addEventListener('input', handleBlur); 
+
+// ta bort div elementet
+btn.addEventListener("click", deleteDiv);
+
+function deleteDiv() {
+  const removeElement = document.getElementById('changingDiv');
+  removeElement.remove();
+}
+
 
 
 

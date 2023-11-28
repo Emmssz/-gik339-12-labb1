@@ -36,7 +36,6 @@ function applyChanges() {
 } 
 
 
-
 /*const colorInput = document.getElementById('color-label');
 const textInput = document.getElementById('text-label');
 const divBox = document.getElementById('changingDiv');

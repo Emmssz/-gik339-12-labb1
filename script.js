@@ -54,7 +54,7 @@ function handleBlur(e) {
 
     if (target.name === 'content') {
         //uppdaterar text
-        settingsDiv.innerHTML = contentSetting.value;
+        settingsDiv.innerHTML = content.value;
 
         //lägger in det i html
         settingsDiv.insertAdjacentElement('beforeend', settingsDiv);

@@ -92,6 +92,7 @@ button{
 
 .changingDiv{
     position: absolute;
+    box-sizing: border-box;
     width: 80%;
     height: 30px;
     bottom: 5%;

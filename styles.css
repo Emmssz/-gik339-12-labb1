@@ -100,5 +100,6 @@ button{
     text-align: center;
     padding: 10px;
     border-radius: 5px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

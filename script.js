@@ -29,12 +29,5 @@ checkbox.addEventListener('change', function () {
 
 // eventlyssnare för när användaren klickar på knappen (som en anonym funktion)
 removeBtn.addEventListener('click', function () {
-    changingDiv.parentnode.removechild(changingDiv);
+    changingDiv.remove();
 });
-
-/*function remove() {
-    var elem = document.getElementById('dummy');
-    elem.parentNode.removeChild(elem);
-
-   /* changingDiv.parentNode.removeChild(changingDiv);
-}); */

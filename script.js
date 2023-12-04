@@ -1,33 +1,33 @@
-const colorInput = document.getElementById('color-label');
-const textInput = document.getElementById('text-label');
-const divBox = document.getElementById('changingDiv');
-const btn = document.getElementById('btnId');
+// deklarerar variabler, och hämtar in de olika elementen från html-koden
 const checkbox = document.getElementById('divStyle');
+const textFields = document.getElementsByClassName('textfield');
+const removeBtn = document.getElementById('removeBtn');
+const changingDiv = document.getElementById('changingDiv');
 
-colorInput.addEventListener('input', applyChanges);
-textInput.addEventListener('input', applyChanges);
-checkbox.addEventListener('change', applyChanges);
+// skriver ut avsändaren (target) till konsolen
+function handleInputEvent(e) {
+    console.log('Den här händelsen genererades av:', e.target);
+    const fieldName = e.target.name;
 
-function applyChanges() {
-    const getColor = colorInput.value;
-    const getText = textInput.value;
-
-    if (checkbox.checked) {
-        divBox.style.backgroundColor = getColor;
-        divBox.innerText = getText;
-    } else {
-        divBox.style.backgroundColor = '';
-        divBox.innerText = '';
+    if (fieldName === 'content') {
+        changingDiv.innerHTML = e.target.value;
     }
 }
 
-//bör ses över, div tas ej bort
-
-// tar bort div-elementet
-btn.addEventListener("click", deleteDiv);
-
-function deleteDiv() {
-  const removeElement = document.getElementById('changingDiv');
-  removeElement.remove();
+// for-loop som används för att koppla eventlyssnare till text-fields
+for (let i = 0; i < textFields.length; i++) {
+    textFields[i].addEventListener('input', handleInputEvent);
+    textFields[i].addEventListener('blur', handleInputEvent);
 }
 
+// eventlyssnare för när ändringar sker i checkboxen (som en anonym funktion)
+checkbox.addEventListener('change', function () {
+    const colorInput = document.getElementById('color');
+    const color = colorInput.value;
+    changingDiv.style.backgroundColor = color;
+});
+
+// eventlyssnare för när användaren klickar på knappen (som en anonym funktion)
+removeBtn.addEventListener('click', function () {
+    changingDiv.remove();
+});

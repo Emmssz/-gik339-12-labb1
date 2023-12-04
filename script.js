@@ -1,6 +1,6 @@
 //hämtar in de olika elementen från html-koden
-const colorInput = document.getElementById('color-label');
-const textInput = document.getElementById('text-label');
+const colorInput = document.getElementById('color');
+const textInput = document.getElementById('text');
 const divBox = document.getElementById('changingDiv');
 const btn = document.getElementById('btnId');
 const checkbox = document.getElementById('divStyle');

@@ -9,22 +9,22 @@
 <body>
     <div class="wrapper">
         <h2> Labb 1 - grupp 12</h2>
-        <div class="div-main">
-			<form>
-                <section class="input-settings">
-                    <label class="input-label" for="color-label">Färg</label>
-                    <input type="text" name="color" id="color-label" class="textfield">
-
-                    <label class="input-label" for="text-label">Innehåll</label>
-                    <input type="text" name="content" id="text-label" class="textfield">
-
-                    <p>Stil på box</p>
-                    <input type="checkbox" name="divStyle" id="divStyle" class="checkbox">
-                </section>
-                <button id="btnId"> Ta bort</button>
-                <div class="changingDiv" id="changingDiv"></div>
-			</form>
-        </div>
+        <form class="settings">
+            <section class="settings__input">
+                <label class="settings__label" for="color">Färg: </label>
+                <input type="text" name="color" id="color" class="textfield"/>
+            </section>
+            <section class="settings__input">
+                <label class="settings__label" for="content">Innehåll: </label>
+                <input type="text" name="content" id="content" class="textfield"/>
+            </section>
+            <section class="settings__input">
+                <label class="settings__label" for="divStyle">Stil på box: </label>
+                <input type="checkbox" name="divStyle" id="divStyle" class="checkbox"/>
+            </section>
+            <button id="removeBtn"> Ta bort</button>
+            <div class="changingDiv" id="changingDiv"></div>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>

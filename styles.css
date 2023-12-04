@@ -1,5 +1,4 @@
 :root{
-    --white: #fff;
     --black:#000000;
     --plum:plum;
     --pink: rgb(194, 76, 176);
@@ -44,6 +43,7 @@ body{
     0 0 10px var(--pink),
     0 0 10px var(--pink),
     0 0 10px var(--pink);
+    
 
 }
 

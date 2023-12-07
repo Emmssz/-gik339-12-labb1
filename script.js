@@ -2,7 +2,7 @@
 //deklarerar variabler, och hämtar in de olika elementen från html-koden
 const checkbox = document.getElementById('divStyle');
 const textFields = document.getElementsByClassName('textfield');
-const removeBtn = document.getElementsByTagName('button');
+const removeBtn = document.getElementsByTagName('button')[0];
 const changingDiv = document.getElementById('changingDiv');
 
 //UPPGIFT 5

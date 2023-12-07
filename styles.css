@@ -1,8 +1,8 @@
-/*deklarerar variabler för färgerna som används*/
+/*deklarerar variabler för färgerna som används på hemsidan*/
 :root{
     --black:#000000;
-    --plum:plum;
-    --pink: rgb(194, 76, 176);
+    --plum:#dda0dd;
+    --pink: #c24cb0;
 }
 
 /*gäller som standard för hela koden*/

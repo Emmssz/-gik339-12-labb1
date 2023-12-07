@@ -6,7 +6,7 @@ const removeBtn = document.getElementsByTagName('button')[0];
 const changingDiv = document.getElementById('changingDiv');
 
 //UPPGIFT 5
-//skriver ut avsändaren (target) till konsolen
+//skriver ut avsändaren (target) till konsolen + content i div:en
 function handleInput(e) {
     //console-log används för att skriva ut informationen till konsolen 
     console.log('Den här händelsen genererades av:', e.target);

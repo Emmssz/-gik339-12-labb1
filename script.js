@@ -1,33 +1,39 @@
-// deklarerar variabler, och hämtar in de olika elementen från html-koden
+//UPPGIFT 4
+//deklarerar variabler, och hämtar in de olika elementen från html-koden
 const checkbox = document.getElementById('divStyle');
 const textFields = document.getElementsByClassName('textfield');
 const removeBtn = document.getElementById('removeBtn');
 const changingDiv = document.getElementById('changingDiv');
 
-// skriver ut avsändaren (target) till konsolen
-function handleInputEvent(e) {
+//UPPGIFT 5
+//skriver ut avsändaren (target) till konsolen
+function handleInput(e) {
+    //console-log används för att skriva ut informationen till konsolen 
     console.log('Den här händelsen genererades av:', e.target);
-    const fieldName = e.target.name;
+    //deklarerar en variabel 
+    const infoPrint = e.target.name;
 
-    if (fieldName === 'content') {
+    //if-loop som gäller när name-attributet är content
+    if (infoPrint === 'content') {
+        //skriver ut användarens text i div:en med innerHTML
         changingDiv.innerHTML = e.target.value;
     }
 }
 
-// for-loop som används för att koppla eventlyssnare till text-fields
+//for-loop som används för att koppla eventlyssnare till text-fields
 for (let i = 0; i < textFields.length; i++) {
-    textFields[i].addEventListener('input', handleInputEvent);
-    textFields[i].addEventListener('blur', handleInputEvent);
+    textFields[i].addEventListener('input', handleInput);
+    textFields[i].addEventListener('blur', handleInput);
 }
 
-// eventlyssnare för när ändringar sker i checkboxen (som en anonym funktion)
+//eventlyssnare för när ändringar sker i checkboxen (som en anonym funktion)
 checkbox.addEventListener('change', function () {
     const colorInput = document.getElementById('color');
     const color = colorInput.value;
     changingDiv.style.backgroundColor = color;
 });
 
-// eventlyssnare för när användaren klickar på knappen (som en anonym funktion)
+//eventlyssnare för när användaren klickar på knappen (som en anonym funktion)
 removeBtn.addEventListener('click', function () {
     changingDiv.remove();
 });

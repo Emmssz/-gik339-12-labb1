@@ -1,9 +1,11 @@
+/*deklarerar variabler för färgerna som används*/
 :root{
     --black:#000000;
     --plum:plum;
     --pink: rgb(194, 76, 176);
 }
 
+/*gäller som standard för hela koden*/
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +30,7 @@ body{
     transform: translate(-50%, -50%);   
 }
 
-/*justerar rubriken (syns ovanför formuläret)*/
+/*justerar rubriken (syns ovanför formuläret) och lägger till förutsättningar för animationen*/
 .wrapper h2{
     color: var(--plum);
     text-align: center;
@@ -50,6 +52,8 @@ body{
     0 0 1000px var(--pink);
  animation: animate 3s infinite alternate;
 }
+
+/*animation i bakgrunden*/
 @keyframes animate{
     40% {
         opacity: 1;
@@ -66,11 +70,9 @@ body{
     40% {
         opacity: 1;
     }
-     
-    
-
 }
 
+/*utseende för div:en med formuläret i*/
 .settings{
     display: inline-block;
     box-sizing: border-box;
@@ -86,6 +88,7 @@ body{
    
 }
 
+/*bredd etc för texten som visas till vänster om fälten som användaren skriver i*/
 .settings__label{
     box-sizing: border-box;
     float: left;
@@ -93,18 +96,20 @@ body{
     margin-bottom: 5%;
 }
 
+/*placering för textfälten som hör till färgen & content*/
 input[type=text]{
     box-sizing: border-box;
     width: 50%;
-    float: right;
     margin-bottom: 5%;
 }
 
+/*placering för textfälten som hör till checkboxen*/
 input[type=checkbox]{
     float: left;
     margin-bottom: 5%;
 }
 
+/*utseende för knappen, i standardläget (när musen inte är över knappen)*/
 button{
     float: right;
     box-sizing: border-box;
@@ -117,8 +122,7 @@ button{
    box-shadow: rgb(194, 78, 180);
 }
 
-
-
+/*ändringar som visas när användaren har musen över knappen*/
 button:hover{
     background-color: var(--black);
     color: var(--plum);
@@ -128,16 +132,13 @@ button:hover{
      0 0 5px rgb(194, 76, 176);
 }
 
-label{
-    float: left;
-    width: 50%;
-}
-
+/*margin & padding för knappen "ta bort"*/
 button{
     margin: 10% 0%;
     padding: 5px;
 }
 
+/*position för div:en som användaren kan påverka*/
 .changingDiv{
     position: absolute;
     box-sizing: border-box;

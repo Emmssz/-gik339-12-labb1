@@ -20,13 +20,13 @@ function handleInput(e) {
     }
 }
 
+//UPPGIFT 6
 //for-loop som används för att koppla eventlyssnare till text-fields
 for (let i = 0; i < textFields.length; i++) {
     textFields[i].addEventListener('input', handleInput);
     textFields[i].addEventListener('blur', handleInput);
 }
 
-//UPPGIFT 6
 //eventlyssnare för när ändringar sker i checkboxen (som en anonym funktion)
 checkbox.addEventListener('change', function () {
     const colorInput = document.getElementById('color');

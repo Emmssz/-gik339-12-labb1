@@ -10,7 +10,7 @@ const changingDiv = document.getElementById('changingDiv');
 function handleInput(e) {
     //console-log används för att skriva ut informationen till konsolen 
     console.log('Den här händelsen genererades av:', e.target);
-    //deklarerar en variabel 
+    //deklarerar en variabel med namn-värdet på elementet
     const infoPrint = e.target.name;
 
     //if-loop som gäller när name-attributet är content
